@@ -145,7 +145,7 @@ def uap_dcgan_attack(args, train_loader, test_loader, model, mask):
 
         # Save statistics
         data_frame = pd.DataFrame(data=results, index=range(epoch_start, epoch + 1))
-        data_frame.to_csv(log_save_path + '/log.csv', indexlabel='epoch')
+        data_frame.to_csv(log_save_path + '/log.csv', index_label='epoch')
 
         # save uap result
         uap_save_path = os.path.join('output', str(args.pre_dataset), 'uap_results', 'gan_patch', str(args.victim), str(args.dataset),
